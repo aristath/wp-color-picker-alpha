@@ -147,8 +147,9 @@ class WP_Color_Picker_Alpha {
 	public function field_color( $args ) {
 		$attributes = isset( $args['current_color'] ) ? ' value="'.$args['current_color'].'"' : ' value=""';
 
-		if ( isset( $args['default_color'] ) )
+		if ( isset( $args['default_color'] ) ) {
 			$attributes .= ' data-default-color="' . $args['default_color'] . '"';
+		}
 
 		if ( isset( $args['alpha'] ) ) {
 			switch ( $args['alpha'] ) {
